@@ -1,0 +1,66 @@
+{
+  "name": "my-simple-plugin",
+  "displayName": "My Simple Plugin",
+  "description": "Simple VS Code plugin with file analysis functionality",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "my-simple-plugin.helloWorld",
+        "title": "Hello World",
+        "category": "My Plugin"
+      },
+      {
+        "command": "my-simple-plugin.showTime",
+        "title": "Show Current Time",
+        "category": "My Plugin"
+      },
+      {
+        "command": "my-simple-plugin.analyzeFile",
+        "title": "Analyze File - Detailed",
+        "category": "My Plugin"
+      },
+      {
+        "command": "my-simple-plugin.quickAnalyze",
+        "title": "Quick Analyze - Status Bar",
+        "category": "My Plugin"
+      }
+    ],
+    "menus": {
+      "command-palette": [
+        {
+          "command": "my-simple-plugin.helloWorld"
+        },
+        {
+          "command": "my-simple-plugin.showTime"
+        },
+        {
+          "command": "my-simple-plugin.analyzeFile"
+        },
+        {
+          "command": "my-simple-plugin.quickAnalyze"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "16.x",
+    "typescript": "^4.7.4"
+  }
+}
