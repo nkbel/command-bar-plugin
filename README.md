@@ -37,4 +37,4 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/YOUR_USERNAME/my-simple-plugin.git
+git clone https://github.com/nkbel/my-simple-plugin.git
